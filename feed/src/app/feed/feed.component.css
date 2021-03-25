@@ -1,0 +1,26 @@
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+  }
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.comment {
+    margin-top: 5px;
+}
+
+.accordion {
+    max-height: 30px;
+}
+
+.body {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+

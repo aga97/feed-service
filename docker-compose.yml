@@ -1,0 +1,32 @@
+version: '3.2'
+services:
+  db:
+    image: mongo
+    restart: always
+    ## db를 컨테이너 밖에 저장할때
+    ##volumes:       
+    ##  - type: bind 
+    ##    source: ./data/db 
+    ##    target: /data/db 
+    container_name: "mongodb"
+    ports:                
+      - "27017:27017"     
+
+  backend:
+    container_name: backend
+    image: aga97/feed-back
+    restart: always
+    depends_on:
+      - db
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+  
+  frontend:
+    container_name: frontend
+    image: aga97/feed-front
+    restart: always
+    ports:
+      - "80:80"
+

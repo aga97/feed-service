@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <mat-sidenav-container>
+        <mat-sidenav  #sidenav role="navigation">
+          <mat-nav-list>
+              <p>                  
+                <mat-icon class="icon">person</mat-icon>
+                <span class="label">{{id}}</span>       
+              </p>
+              <a mat-list-item (click)="refresh()">
+                <mat-icon class="icon">refresh</mat-icon>
+                <span class="label">새로고침</span>
+              </a>
+              <a mat-list-item routerLink="/logout">
+                <mat-icon class="icon">input</mat-icon>
+                <span class="label">로그아웃</span>
+              </a>
+          </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <mat-toolbar color="primary">
+           <div fxHide.gt-xs>
+             <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </div>
+           
+           <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+              <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+                  <li>                  
+                    <mat-icon class="icon">person</mat-icon>
+                    <span class="label">{{id}}</span>       
+                  </li>
+                  <li>
+                    <a routerLink="/main" (click)="refresh()">
+                      <mat-icon class="icon">refresh</mat-icon>
+                      <span class="label">새로고침</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a routerLink="/logout">
+                      <mat-icon class="icon">input</mat-icon>
+                      <span class="label">로그아웃</span>
+                    </a>
+                  </li>
+              </ul>
+           </div>
+          </mat-toolbar>
+          <main>
+            <app-new-feed></app-new-feed>
+            <app-feed></app-feed>
+          </main>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+      <footer>
+        <div>
+          <span>Feed | Powered by JungWoo</span>
+        </div>
+      </footer>
+  </div>
+  

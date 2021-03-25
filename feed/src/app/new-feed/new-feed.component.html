@@ -1,0 +1,31 @@
+
+<div class="wrapper">
+    <mat-card class="card">
+        <mat-card-header >            
+            <mat-card-title>새 피드 작성</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content> 
+            <form class="form" #formDirective="ngForm" [formGroup]="feedForm" (ngSubmit)="submit(formDirective);">
+                <p>    
+                    <mat-form-field class="textwidth" >
+                    <mat-label>피드 제목</mat-label>
+                    <input matInput placeholder="제목을 입력해 주세요" formControlName="title">
+                    </mat-form-field>
+                </p>   
+                <p>    
+                    <mat-form-field class="textwidth" >
+                    <mat-label>피드 내용</mat-label>
+                    <textarea class="textarea" matInput placeholder="내용을 입력해 주세요" formControlName="body"></textarea>
+                    </mat-form-field>
+                </p> 
+                <div class="button">
+                    <button class="buttonsize" type="submit" mat-raised-button color="primary" [disabled]="!feedForm.valid">작성</button>
+                </div>                
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+

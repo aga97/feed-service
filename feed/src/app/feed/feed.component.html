@@ -1,0 +1,38 @@
+<div *ngFor="let f of feeds trackBy: trackByFeed" class="wrapper">
+    <mat-card class="card">
+        <mat-card-header >            
+            <mat-card-title>{{f.title}}</mat-card-title>
+            <mat-card-subtitle>작성자 : {{f.author}} | 작성 일시 : {{f.date | date:'medium':'UTC +9':'ko'}}</mat-card-subtitle>
+
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <p class="body">
+                {{f.body}}
+            </p>            
+        </mat-card-content>
+        <mat-divider></mat-divider>      
+        <mat-card-actions>
+            <mat-accordion multi>                
+                <mat-expansion-panel class="mat-elevation-z0">                                     
+                    <mat-expansion-panel-header class="accordion">                        
+                        <mat-panel-title>
+                          댓글 보기
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          댓글 수 : {{f.comments.length}}                          
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>                          
+                        <app-new-comment [id]="f._id"></app-new-comment>          
+                        <mat-card  *ngFor="let comment of f.comments " class="comment">
+                            <div>{{comment.author}} : {{comment.body}} </div>
+                            <div>작성 일시 : {{comment.date | date:'short':'UTC +9':'ko'}}</div>
+                        </mat-card>
+                </mat-expansion-panel>
+            </mat-accordion>   
+        </mat-card-actions>     
+    </mat-card>
+</div>
+
+
+

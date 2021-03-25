@@ -1,0 +1,12 @@
+<mat-card>
+    <form class="form" #formDirective="ngForm" [formGroup]="feedForm" (ngSubmit)="submit(formDirective);">
+        <p >    
+            <mat-form-field class="textwidth" >            
+                <input type="text" matInput placeholder="댓글 입력" formControlName="body">                
+            </mat-form-field>
+        </p>   
+        <div class="button">
+            <button class="buttonsize" type="submit" mat-raised-button color="primary" [disabled]="!feedForm.valid">작성</button>
+        </div>          
+    </form>
+</mat-card>
