@@ -28,20 +28,20 @@
     프론트 : 4200   
     백엔드 : 3000   
     DB : 27017  
-1. git clone으로 repository 복사합니다
+    
+    1. git clone으로 repository 복사합니다.
 
- 2. 터미널에서 <code>/feed</code> 폴더로 이동후 아래 명령어를 입력합니다.
-
+    2. 터미널에서 <code>/feed</code> 폴더로 이동후 아래 명령어를 입력합니다.
        <pre>npm install</pre> 
- 3.   <pre>ng serve</pre> 
+    3. <pre>ng serve</pre> 
        또는    
        <pre>ng serve --port <포트번호></pre>    
- 4. <code>/feed-back</code> 폴더로 이동해서 아래 명령어를 입력합니다.
+    4. <code>/feed-back</code> 폴더로 이동해서 아래 명령어를 입력합니다.
        <pre>npm install</pre> 
- 5. <pre>npm run start</pre>
+    5. <pre>npm run start</pre>
        포트를 변경하고 싶다면
     <code>/feed-back/src/main.ts</code> 에서 <code>app.listion(3000)</code>에서 포트 번호를 변경 합니다.
- 6. localhost:4200 또는 설정한 포트로 접속합니다.
+    6. localhost:4200 또는 설정한 포트로 접속합니다.
 ***
 ### **동작 화면**
 
