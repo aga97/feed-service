@@ -17,14 +17,15 @@
     
     1. docker-compose 파일을 받거나, git clone 으로 repository을 복사합니다.
 
-    2. 터미널에서 <code>/feed</code> 폴더로 이동해 아래 명령어를 입력합니다.
+    2. 터미널에서 루트 폴더로 이동해 아래 명령어를 입력합니다.
         <pre>docker-compose up </pre>
 
     3. 브라우저에서 localhost or localhost:80 으로 접속합니다. 
 
 2. 도커를 사용하지 않는 경우   
 * 주의 사항 :    
-    *  angular-cli가 설치되어 있어야 합니다. (ng 명령어)   
+    * angular-cli가 설치되어 있어야 합니다. (ng 명령어)   
+    * mongoDB가 설치되어 있어야 합니다.
     * 기본적으로 아래와 같이 포트를 사용합니다.  
     프론트 : 4200   
     백엔드 : 3000   
