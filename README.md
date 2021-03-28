@@ -15,7 +15,7 @@
     * docker가 설치되어 있어야합니다.
     * 80번 포트를 사용합니다.
     
-    1. docker-compose 파일을 받거나, git clone 으로 repository을 복사합니다.
+    1. docker-compose 파일을 받거나, git clone 으로 repository를 복사합니다.
 
     2. 터미널에서 루트 폴더로 이동해 아래 명령어를 입력합니다.
         <pre>docker-compose up </pre>
@@ -31,7 +31,7 @@
     백엔드 : 3000   
     DB : 27017  
 
-    1. git clone으로 repository 복사합니다.
+    1. git clone으로 repository를 복사합니다.
 
     2. 터미널에서 <code>/feed</code> 폴더로 이동후 아래 명령어를 입력합니다.
        <pre>npm install</pre> 
