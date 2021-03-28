@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
-import { FeedService } from '../feed/feed.service';
 import { NewFeedService } from './new-feed.service';
 
 @Component({

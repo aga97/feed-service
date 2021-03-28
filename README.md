@@ -3,9 +3,11 @@
 페이스북의 Feed를 본따 만든 서비스
 ***
 ## 문제 해결 전략
-* sign 화면에서 Id를 입력받아 main 화면으로 넘어갑니다.   
-* 인증은 따로 하지 않으며, sessionStorage에 저장해 피드의 작성자, 또는 댓글의 작성자로 사용합니다.      
+* angularjs로 프론트, nestjs로 백엔드를 구성하고 db로 mongodb를 사용하였습니다.
+* 로그인시 인증은 따로 하지 않으며, sessionStorage에 저장해 피드의 작성자, 또는 댓글의 작성자로 사용합니다.      
 * api를 통해 데이터를 가져오면 <code>BehaviorSubject</code>를 사용해, 필요한 컴포넌트에서 필요한 상태를 구독하여 사용합니다.
+* service에 함수를 구현해 필요한 함수를 가져다 사용하거나 컴포넌트를 사용 할 수 있습니다.
+* ngfor의 경우 데이터가 달라지면 구성요소를 전부 다시 렌더링 하기 때문에 <code>trackBy</code>로 필요한 부분만 다시 렌더링 하도록 하였습니다.
 ***
 ## **실행 방법**
 1. docker를 사용하는 경우   
@@ -43,6 +45,38 @@
     6. localhost:4200 또는 설정한 포트로 접속합니다.
 ***
 ## **동작 화면**
+<center>
 
- 이미지 업로드 후 작성 요망
+로그인화면. 아이디를 입력해 로그인할 수 있습니다.
+
+![signIn](https://user-images.githubusercontent.com/25195582/112740746-8d2a9800-8fba-11eb-8777-77a6a6ed7525.png)
+
+로그인 후 화면.
+
+![main1](https://user-images.githubusercontent.com/25195582/112740747-8ef45b80-8fba-11eb-8210-bfbe2540ecdf.png)
+
+우측 상단에 ID와 새로고침, 로그아웃 버튼이 있습니다.
+
+![main6](https://user-images.githubusercontent.com/25195582/112740753-9451a600-8fba-11eb-96e8-6fbe7d6182e9.png)
+
+
+피드 작성 화면. 제목과 내용을 입력해 피드를 작성합니다.
+
+![main2](https://user-images.githubusercontent.com/25195582/112740913-b0097c00-8fbb-11eb-8dbb-c2238489619a.png)
+
+피드 작성후 화면. 피드의 내용과 댓글을 확인 할 수 있습니다.
+
+![main3](https://user-images.githubusercontent.com/25195582/112740748-90258880-8fba-11eb-969c-31b041386850.png)
+
+댓글 창을 눌렀을 때 화면. 댓글을 작성할 수 있습니다.
+
+![main4](https://user-images.githubusercontent.com/25195582/112740750-9287e280-8fba-11eb-8178-98b467d2fb59.png)
+
+댓글 작성 후 화면. 작성한 사람의 ID와 내용, 일시가 표시됩니다.
+
+![main5](https://user-images.githubusercontent.com/25195582/112740752-93207900-8fba-11eb-8a89-b9f89ecd3705.png)
+
+</center>
+
+
 
